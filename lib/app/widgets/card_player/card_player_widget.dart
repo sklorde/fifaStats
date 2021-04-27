@@ -3,6 +3,7 @@ import 'package:fifa_stats/app/shared/models/PlayerStats.dart';
 import 'package:fifa_stats/app/utils/fifaStatsColors.dart';
 import 'package:flutter/material.dart';
 import 'package:octo_image/octo_image.dart';
+import 'package:fifa_stats/app/utils/string_extension.dart';
 
 class CardPlayerWidget extends StatelessWidget {
   final PlayerStats playerStats;
@@ -54,11 +55,7 @@ class CardPlayerWidget extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      playerStats.positions
-                          .cast()
-                          .toString()
-                          .replaceAll('[', '')
-                          .replaceAll(']', ''),
+                      playerStats.positions.cast().toString().toPosition(),
                       style: TextStyle(
                         color: Color.fromRGBO(143, 148, 155, 1),
                         fontSize: 15,
