@@ -1,3 +1,4 @@
+import 'package:fifa_stats/app/utils/fifaStatsColors.dart';
 import 'package:fifa_stats/app/widgets/card_player/card_player_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -17,7 +18,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        color: Color.fromRGBO(28, 39, 51, 1),
+        color: FifaStatsColors.primary,
         child: Padding(
           padding: EdgeInsets.fromLTRB(20, 30, 20, 20),
           child: Observer(

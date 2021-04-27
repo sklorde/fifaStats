@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fifa_stats/app/shared/models/PlayerStats.dart';
+import 'package:fifa_stats/app/utils/fifaStatsColors.dart';
 import 'package:flutter/material.dart';
 import 'package:octo_image/octo_image.dart';
 
@@ -18,7 +19,7 @@ class CardPlayerWidget extends StatelessWidget {
         height: 100,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(22),
-          color: Color.fromRGBO(41, 55, 76, 1).withOpacity(0.42),
+          color: FifaStatsColors.secundary,
         ),
         child: Padding(
           padding: EdgeInsets.all(20),
