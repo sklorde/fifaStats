@@ -1,6 +1,12 @@
+import 'package:diacritic/diacritic.dart';
+
 extension StringExtension on String {
   toPosition() {
     return this.replaceAll('[', '').replaceAll(']', '');
+  }
+
+  toCompare() {
+    return removeDiacritics(this.toLowerCase());
   }
 
   toLanguage() {
