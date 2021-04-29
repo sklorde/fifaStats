@@ -55,7 +55,7 @@ class CardPlayerWidget extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      playerStats.positions.cast().toString().toPosition(),
+                      playerStats.primaryPosition.toLanguage(),
                       style: TextStyle(
                         color: Color.fromRGBO(143, 148, 155, 1),
                         fontSize: 15,
