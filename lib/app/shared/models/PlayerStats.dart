@@ -7,8 +7,8 @@ class PlayerStats {
   List<String> positions;
   String age;
   String birthDate;
-  int height;
-  int weight;
+  String height;
+  String weight;
   int overallRating;
   int potential;
   String value;
