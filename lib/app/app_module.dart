@@ -1,3 +1,4 @@
+import 'widgets/search_bar/search_bar_controller.dart';
 import 'widgets/card_player/card_player_controller.dart';
 import 'app_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -8,6 +9,7 @@ import 'package:fifa_stats/app/modules/home/home_module.dart';
 class AppModule extends MainModule {
   @override
   List<Bind> get binds => [
+        Bind((i) => SearchBarController()),
         Bind((i) => CardPlayerController()),
         Bind((i) => AppController()),
       ];
