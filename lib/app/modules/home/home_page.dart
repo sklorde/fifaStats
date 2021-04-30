@@ -1,7 +1,5 @@
-import 'package:fifa_stats/app/shared/models/PlayerStats.dart';
 import 'package:fifa_stats/app/utils/fifaStatsColors.dart';
 import 'package:fifa_stats/app/widgets/card_player/card_player_widget.dart';
-import 'package:fifa_stats/app/utils/string_extension.dart';
 import 'package:fifa_stats/app/widgets/search_bar/search_bar_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
