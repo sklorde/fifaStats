@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fifa_stats/app/shared/models/PlayerStats.dart';
 import 'package:fifa_stats/app/utils/fifaStatsColors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:octo_image/octo_image.dart';
 import 'package:fifa_stats/app/utils/string_extension.dart';
 
@@ -14,7 +15,7 @@ class CardPlayerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        print('click');
+        Modular.link.pushNamed('/info', arguments: playerStats);
       },
       child: Container(
         height: 100,
