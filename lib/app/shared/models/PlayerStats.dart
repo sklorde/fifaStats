@@ -6,21 +6,15 @@ class PlayerStats {
   String primaryPosition;
   List<String> positions;
   String age;
-  String birthDate;
   String height;
   String weight;
   int overallRating;
   int potential;
-  String value;
-  String wage;
   String preferredFoot;
   int weakFoot;
   int skillMoves;
   int internationalReputation;
   String workRate;
-  String bodyType;
-  String realFace;
-  String releaseClause;
   Teams teams;
   Attacking attacking;
   Skill skill;
@@ -29,7 +23,6 @@ class PlayerStats {
   Mentality mentality;
   Defending defending;
   Goalkeeping goalkeeping;
-  List<String> playerTraits;
   List<String> playerHashtags;
   Logos logos;
 
@@ -41,21 +34,15 @@ class PlayerStats {
       this.primaryPosition,
       this.positions,
       this.age,
-      this.birthDate,
       this.height,
       this.weight,
       this.overallRating,
       this.potential,
-      this.value,
-      this.wage,
       this.preferredFoot,
       this.weakFoot,
       this.skillMoves,
       this.internationalReputation,
       this.workRate,
-      this.bodyType,
-      this.realFace,
-      this.releaseClause,
       this.teams,
       this.attacking,
       this.skill,
@@ -64,7 +51,6 @@ class PlayerStats {
       this.mentality,
       this.defending,
       this.goalkeeping,
-      this.playerTraits,
       this.playerHashtags,
       this.logos});
 
@@ -76,21 +62,15 @@ class PlayerStats {
     primaryPosition = json['primary_position'];
     positions = json['positions'].cast<String>();
     age = json['age'];
-    birthDate = json['birth_date'];
     height = json['height'];
     weight = json['weight'];
     overallRating = json['Overall Rating'];
     potential = json['Potential'];
-    value = json['Value'];
-    wage = json['Wage'];
     preferredFoot = json['Preferred Foot'];
     weakFoot = json['Weak Foot'];
     skillMoves = json['Skill Moves'];
     internationalReputation = json['International Reputation'];
     workRate = json['Work Rate'];
-    bodyType = json['Body Type'];
-    realFace = json['Real Face'];
-    releaseClause = json['Release Clause'];
     teams = json['teams'] != null ? new Teams.fromJson(json['teams']) : null;
     attacking = json['attacking'] != null
         ? new Attacking.fromJson(json['attacking'])
@@ -109,7 +89,6 @@ class PlayerStats {
     goalkeeping = json['goalkeeping'] != null
         ? new Goalkeeping.fromJson(json['goalkeeping'])
         : null;
-    playerTraits = json['player_traits'].cast<String>();
     playerHashtags = json['player_hashtags'].cast<String>();
     logos = json['logos'] != null ? new Logos.fromJson(json['logos']) : null;
   }
@@ -123,21 +102,15 @@ class PlayerStats {
     data['primary_position'] = this.primaryPosition;
     data['positions'] = this.positions;
     data['age'] = this.age;
-    data['birth_date'] = this.birthDate;
     data['height'] = this.height;
     data['weight'] = this.weight;
     data['Overall Rating'] = this.overallRating;
     data['Potential'] = this.potential;
-    data['Value'] = this.value;
-    data['Wage'] = this.wage;
     data['Preferred Foot'] = this.preferredFoot;
     data['Weak Foot'] = this.weakFoot;
     data['Skill Moves'] = this.skillMoves;
     data['International Reputation'] = this.internationalReputation;
     data['Work Rate'] = this.workRate;
-    data['Body Type'] = this.bodyType;
-    data['Real Face'] = this.realFace;
-    data['Release Clause'] = this.releaseClause;
     if (this.teams != null) {
       data['teams'] = this.teams.toJson();
     }
@@ -162,7 +135,6 @@ class PlayerStats {
     if (this.goalkeeping != null) {
       data['goalkeeping'] = this.goalkeeping.toJson();
     }
-    data['player_traits'] = this.playerTraits;
     data['player_hashtags'] = this.playerHashtags;
     if (this.logos != null) {
       data['logos'] = this.logos.toJson();
