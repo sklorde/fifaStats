@@ -13,25 +13,10 @@ List<PlayerStats> parsePlayers(String responseBody) {
 
 class PlayerRepository extends Disposable {
   Future<List<PlayerStats>> getPlayers() async {
-    List<PlayerStats> list = <PlayerStats>[];
-
     String data =
         await rootBundle.loadString('lib/app/assets/players_stats.json');
 
     return compute(parsePlayers, data);
-
-    // List<PlayerStats> decode(dynamic obj) {
-    //   final decoded = jsonDecode(obj);
-    //   return decoded
-    //       .map<PlayerStats>((json) => PlayerStats.fromJson(json))
-    //       .toList();
-    // }
-
-    // list = (json.decode(response) as List)
-    //     .map((i) => PlayerStats.fromJson(i))
-    //     .toList();
-
-    // return list;
   }
 
   @override
