@@ -16,41 +16,39 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Container(
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            color: FifaStatsColors.primary,
-            child: Padding(
-              padding: EdgeInsets.fromLTRB(20, 95, 20, 20),
-              child: Observer(
-                builder: (_) {
-                  return SmartRefresher(
-                    controller: controller.refreshController,
-                    enablePullDown: false,
-                    enablePullUp: false,
-                    child: ListView.separated(
-                      physics: BouncingScrollPhysics(),
-                      itemCount: controller.players.length,
-                      itemBuilder: (context, index) {
-                        final player = controller.players[index];
+      body: SearchBarWidget(
+        players: controller.players.toList(),
+        body: Container(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          color: FifaStatsColors.primary,
+          child: Padding(
+            padding: EdgeInsets.fromLTRB(20, 95, 20, 20),
+            child: Observer(
+              builder: (_) {
+                return SmartRefresher(
+                  controller: controller.refreshController,
+                  enablePullDown: false,
+                  enablePullUp: false,
+                  child: ListView.separated(
+                    physics: BouncingScrollPhysics(),
+                    itemCount: controller.players.length,
+                    itemBuilder: (context, index) {
+                      final player = controller.players[index];
 
-                        return CardPlayerWidget(
-                          player,
-                        );
-                      },
-                      separatorBuilder: (context, index) {
-                        return Padding(padding: EdgeInsets.only(top: 15));
-                      },
-                    ),
-                  );
-                },
-              ),
+                      return CardPlayerWidget(
+                        player,
+                      );
+                    },
+                    separatorBuilder: (context, index) {
+                      return Padding(padding: EdgeInsets.only(top: 15));
+                    },
+                  ),
+                );
+              },
             ),
           ),
-          SearchBarWidget(players: controller.players.toList()),
-        ],
+        ),
       ),
     );
   }
