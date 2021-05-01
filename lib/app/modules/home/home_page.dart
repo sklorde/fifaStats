@@ -23,7 +23,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
           width: MediaQuery.of(context).size.width,
           color: FifaStatsColors.primary,
           child: Padding(
-            padding: EdgeInsets.fromLTRB(20, 95, 20, 20),
+            padding: EdgeInsets.fromLTRB(20, 70, 20, 20),
             child: Observer(
               builder: (_) {
                 return SmartRefresher(
