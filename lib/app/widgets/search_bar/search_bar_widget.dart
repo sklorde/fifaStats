@@ -30,7 +30,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
       backgroundColor: FifaStatsColors.secundary,
       hintStyle: TextStyle(color: Colors.grey.shade400),
       transition: CircularFloatingSearchBarTransition(),
-      debounceDelay: Duration(milliseconds: 500),
+      debounceDelay: Duration(milliseconds: 550),
       onQueryChanged: (query) => onQueryChanged(query),
       builder: (context, _) {
         if (_suggestions == null)
